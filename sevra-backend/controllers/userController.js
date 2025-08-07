@@ -1,9 +1,6 @@
 import User from '../models/userModel.js';
 import generateToken from '../utils/generateToken.js';
 
-// @desc    Register a new user
-// @route   POST /api/users/register
-// @access  Public
 const registerUser = async (req, res) => {
   const { name, email, password, phone } = req.body;
   const userExists = await User.findOne({ email });
@@ -11,7 +8,6 @@ const registerUser = async (req, res) => {
   if (userExists) {
     return res.status(400).json({ message: 'User already exists' });
   }
-
   const user = await User.create({ name, email, password, phone });
 
   if (user) {
@@ -27,9 +23,6 @@ const registerUser = async (req, res) => {
   }
 };
 
-// @desc    Auth user & get token (Login)
-// @route   POST /api/users/login
-// @access  Public
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
@@ -47,9 +40,6 @@ const loginUser = async (req, res) => {
   }
 };
 
-// @desc    Get user profile
-// @route   GET /api/users/profile
-// @access  Private
 const getUserProfile = async (req, res) => {
   const user = await User.findById(req.user._id);
 
@@ -64,10 +54,6 @@ const getUserProfile = async (req, res) => {
     res.status(404).json({ message: 'User not found' });
   }
 };
-
-// @desc    Update user profile
-// @route   PUT /api/users/profile
-// @access  Private
 const updateUserProfile = async (req, res) => {
   const user = await User.findById(req.user._id);
 
@@ -91,6 +77,4 @@ const updateUserProfile = async (req, res) => {
     res.status(404).json({ message: 'User not found' });
   }
 };
-
-// V-- THIS EXPORTS ALL THE CONTROLLER FUNCTIONS --V
 export { registerUser, loginUser, getUserProfile, updateUserProfile };
