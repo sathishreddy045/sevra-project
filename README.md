@@ -57,6 +57,22 @@ Advanced Product Filtering: Users can filter products by category, sort by price
 
 #### bcryptjs: For hashing user passwords before storing them in the database.
 
+## Project Showcaseh
+Here are a few screenshots of the application in action.
+## 1. HomePage
+<img width="1920" height="972" alt="homepage" src="https://github.com/user-attachments/assets/9affcaee-35d2-4037-9359-0d4d47681b46" />
+
+## 2. Services Page
+<img width="1920" height="974" alt="services" src="https://github.com/user-attachments/assets/882efd53-7882-48e2-a300-74254661dc2e" />
+
+## 3. Products Page
+<img width="1920" height="973" alt="products" src="https://github.com/user-attachments/assets/8df7270f-9d98-4bff-8adf-17e6cef3c73b" />
+
+## 4. Dashboard
+<img width="1920" height="973" alt="dashboard" src="https://github.com/user-attachments/assets/67c1a197-11b4-4bf1-92a4-4e27448984ba" />
+
+## 5. Cart Page
+<img width="1920" height="976" alt="cart" src="https://github.com/user-attachments/assets/7c480dee-1679-4496-bbc2-441edefa5cc4" />
 
 ### How to Run the App Locally
 To run this project on your local machine, you will need to run both the backend and frontend servers simultaneously.
