@@ -5,35 +5,58 @@
 The current prototype includes the following features:
 
 ### Homepage & UI
-Attractive & Responsive Design: A clean, modern UI that works on both desktop and mobile devices.
+#### Attractive & Responsive Design: A clean, modern UI that works on both desktop and mobile devices.
 
-Complete Homepage Sections: Includes a Hero section, Services, Products, Testimonials, News & Updates, and a Contact Us form.
+#### Complete Homepage Sections: Includes a Hero section, Services, Products, Testimonials, News & Updates, and a Contact Us form.
 
-Hybrid Navigation: Features dedicated pages for /services and /products, while also allowing users to jump to sections on the homepage.
+#### Hybrid Navigation: Features dedicated pages for /services and /products, while also allowing users to jump to sections on the homepage.
 
-User Authentication & Dashboard
+#### User Authentication & Dashboard
 Full Signup/Login Flow: Secure user registration and login with encrypted passwords.
 
-JWT-based Authentication: User state is managed globally using React Context and JWT, with tokens stored in localStorage.
+#### JWT-based Authentication: User state is managed globally using React Context and JWT, with tokens stored in localStorage.
 
-Protected Routes: The User Dashboard and Edit Profile pages are protected and can only be accessed by logged-in users.
+#### Protected Routes: The User Dashboard and Edit Profile pages are protected and can only be accessed by logged-in users.
 
-Personalized Dashboard: Welcomes the user by name and displays a complete list of their past booking history.
+#### Personalized Dashboard: Welcomes the user by name and displays a complete list of their past booking history.
 
-Profile Editing: Logged-in users can update their name, email, and phone number.
+#### Profile Editing: Logged-in users can update their name, email, and phone number.
 
-Booking & Cart Functionality
-Add to Cart: Users can add products to a shopping cart from the products page.
+#### Booking & Cart Functionality
+#### Add to Cart: Users can add products to a shopping cart from the products page.
 
-Cart Page: A dedicated page to view, modify quantities, or remove items from the cart.
+#### Cart Page: A dedicated page to view, modify quantities, or remove items from the cart.
 
-Booking System: The checkout process saves the user's cart as a booking in the database, linked to their user ID.
+#### Booking System: The checkout process saves the user's cart as a booking in the database, linked to their user ID.
 
 ### Extra Features
 Advanced Product Filtering: Users can filter products by category, sort by price (low-to-high and high-to-low), and search by name in real-time.
 
 ### Tech Stack Used
-This project was built using the MERN stack and other modern web technologies.
+#### Frontend
+#### React.js (Vite): A modern JavaScript library for building user interfaces.
+
+#### React Router: For handling client-side routing and navigation.
+
+#### React Context API: For global state management (Authentication and Shopping Cart).
+
+#### Axios: For making HTTP requests to the backend API.
+
+#### Standard CSS: For custom, component-based styling and responsive design.
+
+#### Backend
+#### Node.js: A JavaScript runtime for building the server.
+
+#### Express.js: A web application framework for Node.js, used to build the REST API.
+
+#### MongoDB: A NoSQL database used to store user, product, and booking data.
+
+#### Mongoose: An Object Data Modeling (ODM) library for MongoDB and Node.js.
+
+#### JSON Web Tokens (JWT): For securing user authentication and protecting routes.
+
+#### bcryptjs: For hashing user passwords before storing them in the database.
+
 
 ### How to Run the App Locally
 To run this project on your local machine, you will need to run both the backend and frontend servers simultaneously.
@@ -44,32 +67,31 @@ Node.js installed on your machine.
 MongoDB Atlas account for the database.
 
 1. Backend Setup
-## 1. Navigate to the backend directory
+### 1. Navigate to the backend directory
 cd sevra-backend
 
-## 2. Install dependencies
+### 2. Install dependencies
 npm install
 
-## 3. Create a .env file in the root of the /sevra-backend folder
-##   and add your environment variables:
+### 3. Create a .env file in the root of the /sevra-backend folder and add your environment variables:
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_super_long_and_random_secret_key
 NODE_ENV=development
 PORT=5001
 
-## 4. Start the backend server
+### 4. Start the backend server
 npm run dev
 
 The backend server will be running on http://localhost:5001.
 
-# 2. Frontend Setup
-## 1. Open a new terminal and navigate to the frontend directory
+## 2. Frontend Setup
+### 1. Open a new terminal and navigate to the frontend directory
 cd sevra-frontend
 
-## 2. Install dependencies
+### 2. Install dependencies
 npm install
 
-## 3. Start the frontend development server
+### 3. Start the frontend development server
 npm run dev
 
 The frontend application will open in your browser, usually at http://localhost:5173.
@@ -77,9 +99,9 @@ The frontend application will open in your browser, usually at http://localhost:
 ### Key Learnings & Future Scope
 This project was a great hands-on experience in building a full-stack application.
 
-Key Learning: A major part of the development process was debugging the communication between the frontend and backend, especially handling CORS issues and ensuring the data models matched between the client and server.
+#### Key Learning: A major part of the development process was debugging the communication between the frontend and backend, especially handling CORS issues and ensuring the data models matched between the client and server.
 
-Future Scope: If I were to continue developing this project, my next steps would be:
+#### Future Scope: If I were to continue developing this project, my next steps would be:
 
 Implement a real payment gateway like Razorpay.
 
