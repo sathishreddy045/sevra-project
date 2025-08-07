@@ -8,6 +8,7 @@ const registerUser = async (req, res) => {
   if (userExists) {
     return res.status(400).json({ message: 'User already exists' });
   }
+
   const user = await User.create({ name, email, password, phone });
 
   if (user) {
@@ -77,4 +78,5 @@ const updateUserProfile = async (req, res) => {
     res.status(404).json({ message: 'User not found' });
   }
 };
+
 export { registerUser, loginUser, getUserProfile, updateUserProfile };
