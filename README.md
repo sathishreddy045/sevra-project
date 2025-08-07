@@ -79,10 +79,9 @@ To run this project on your local machine, you will need to run both the backend
 
 ### Prerequisites
 Node.js installed on your machine.
-
 MongoDB Atlas account for the database.
 
-1. Backend Setup
+## 1. Backend Setup
 ### 1. Navigate to the backend directory
 cd sevra-backend
 
