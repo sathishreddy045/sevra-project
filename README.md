@@ -57,7 +57,7 @@ Advanced Product Filtering: Users can filter products by category, sort by price
 
 #### bcryptjs: For hashing user passwords before storing them in the database.
 
-## Project Showcaseh
+## Project Showcase
 Here are a few screenshots of the application in action.
 ## 1. HomePage
 <img width="1920" height="972" alt="homepage" src="https://github.com/user-attachments/assets/9affcaee-35d2-4037-9359-0d4d47681b46" />
