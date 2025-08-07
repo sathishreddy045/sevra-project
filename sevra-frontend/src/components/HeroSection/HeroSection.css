@@ -1,5 +1,4 @@
 .hero-container {
-  /* This is the line that was missing */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home_dp.jpg');
   
   background-size: cover;
