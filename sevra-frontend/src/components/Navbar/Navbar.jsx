@@ -42,7 +42,7 @@ const Navbar = () => {
               <Link to="/products" className="nav-links" onClick={closeMobileMenu}>Products</Link>
             </li>
             <li className="nav-item">
-              <a href="/#contact" className="nav-links" onClick={closeMobileMenu}>Contact Us</a>
+              <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>Contact Us</Link>
             </li>
           </ul>
 

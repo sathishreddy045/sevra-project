@@ -1,38 +1,37 @@
 import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import AuthContext from '../context/AuthContext';
 import './AuthForm.css';
 
-const LoginPage = () => {
+const AdminLoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
 
     try {
-      const config = {
-        headers: { 'Content-Type': 'application/json' },
-      };
-      const { data } = await axios.post(
-        'http://localhost:5001/api/users/login',
-        { email, password },
-        config
-      );
-      login(data);
+      const { data } = await axios.post('http://localhost:5001/api/users/login', { email, password });
+      
+      if (data && data.isAdmin) {
+        login(data);
+      } else {
+        setError('Access Denied. Not an administrator.');
+      }
     } catch (err) {
-      setError(err.response?.data?.message || 'An error occurred. Please try again.');
+      setError(err.response?.data?.message || 'Login failed. Please try again.');
     }
   };
 
   return (
     <div className="auth-container">
       <div className="auth-form-wrapper">
-        <h2 className="auth-title">Login to Sevra</h2>
+        <h2 className="auth-title">Admin Login</h2>
         {error && <p className="auth-error">{error}</p>}
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
@@ -45,12 +44,9 @@ const LoginPage = () => {
           </div>
           <button type="submit" className="auth-button">Login</button>
         </form>
-        <p className="auth-switch">
-          Don't have an account? <Link to="/signup">Sign Up</Link>
-        </p>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default AdminLoginPage;

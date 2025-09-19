@@ -12,5 +12,4 @@ const contactSchema = mongoose.Schema(
 
 const Contact = mongoose.model('Contact', contactSchema);
 
-// This is the line that needs to be added or fixed.
 export default Contact;

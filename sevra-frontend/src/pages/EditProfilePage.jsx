@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import AuthContext from '../context/AuthContext';
-import './AuthForm.css'; // Reusing the auth form styles
+import './AuthForm.css'; 
 
 const EditProfilePage = () => {
-  const { user, login } = useContext(AuthContext); // Use login to update context
+  const { user, login } = useContext(AuthContext);
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -40,10 +40,9 @@ const EditProfilePage = () => {
       };
       const { data } = await axios.put('http://localhost:5001/api/users/profile', updatedData, config);
       
-      // Update the global state and localStorage with the new user data
       login(data);
       setMessage('Profile updated successfully!');
-      setPassword(''); // Clear password field
+      setPassword('');
     } catch (err) {
       setError(err.response?.data?.message || 'Update failed.');
     }

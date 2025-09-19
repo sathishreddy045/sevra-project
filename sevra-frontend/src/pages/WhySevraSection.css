@@ -1,0 +1,50 @@
+.why-sevra-section {
+  background-color: var(--background-color);
+}
+
+.why-sevra-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px;
+}
+
+.feature-icon-wrapper {
+  background-color: var(--primary-color);
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover .feature-icon-wrapper {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(46, 125, 50, 0.4);
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 960px) {
+  .why-sevra-grid {
+    grid-template-columns: 1fr;
+  }
+}

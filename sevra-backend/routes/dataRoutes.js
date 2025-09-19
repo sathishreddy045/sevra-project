@@ -2,13 +2,13 @@ import express from 'express';
 const router = express.Router();
 import {
   getServices,
-  getProducts,
+  getPublicProducts,
   getNews,
   submitContactForm,
 } from '../controllers/dataController.js';
 
 router.get('/services', getServices);
-router.get('/products', getProducts);
+router.get('/products', getPublicProducts);
 router.get('/news', getNews);
 router.post('/contact', submitContactForm);
 

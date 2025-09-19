@@ -12,5 +12,4 @@ router.post('/register', registerUser);
 router.post('/login', loginUser);
 router.route('/profile').get(protect, getUserProfile).put(protect, updateUserProfile);
 
-// Make sure this line is at the end!
 export default router;

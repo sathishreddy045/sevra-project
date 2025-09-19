@@ -2,7 +2,6 @@ import React from 'react';
 import ProductsSection from '../components/ProductsSection/ProductsSection';
 
 const ProductsPage = () => {
-  // This page just renders the ProductsSection component
   return (
     <main>
       <ProductsSection />
@@ -10,5 +9,4 @@ const ProductsPage = () => {
   );
 };
 
-// This is the required export line
 export default ProductsPage;

@@ -1,20 +1,23 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection/HeroSection';
 import ServicesSection from '../components/ServicesSection/ServicesSection';
-import ProductsSection from '../components/ProductsSection/ProductsSection';
+import ProductPreviewSection from '../pages/ProductPreviewSection';
+import WhySevraSection from '../pages/WhySevraSection';
 import NewsSection from '../components/NewsSection/NewsSection';
-import ContactSection from '../components/ContactSection/ContactSection';
+import ContactPage from './ContactPage';
 
 const HomePage = () => {
   return (
     <>
       <HeroSection />
       <ServicesSection />
-      <ProductsSection />
+      <ProductPreviewSection />
+      <WhySevraSection />
       <NewsSection />
-      <ContactSection />
+      <ContactPage />
     </>
   );
 };
 
 export default HomePage;
+

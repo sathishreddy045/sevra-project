@@ -4,7 +4,7 @@
   align-items: center;
   padding: 60px 20px;
   background-color: var(--background-color);
-  min-height: calc(100vh - 160px); /* Full height minus navbar and footer */
+  min-height: calc(100vh - 160px); 
 }
 
 .auth-form-wrapper {
@@ -92,4 +92,10 @@
   border-radius: 5px;
   text-align: center;
   margin-bottom: 20px;
+}
+.auth-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: -20px;
+  margin-bottom: 30px;
 }

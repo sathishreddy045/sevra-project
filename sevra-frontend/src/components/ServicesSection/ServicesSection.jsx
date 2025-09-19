@@ -1,11 +1,12 @@
 import React from 'react';
-import './ServicesSection.css';
 
 import groceryIcon from '../../assets/icons/groceries.png';
 import medicineIcon from '../../assets/icons/medicine.png';
 import fertilizerIcon from '../../assets/icons/fertilizers.png';
 import healthIcon from '../../assets/icons/healthcare.png';
 import educationIcon from '../../assets/icons/education.png';
+
+import './ServicesSection.css';
 
 const servicesData = [
   {
@@ -29,9 +30,9 @@ const servicesData = [
     description: 'Health services and products for your livestock.'
   },
   {
-    icon: educationIcon, // Changed icon
-    name: 'Education Service', // Changed name
-    description: 'Access to online courses and learning materials.' // Changed description
+    icon: educationIcon, 
+    name: 'Education Service', 
+    description: 'Access to online courses and learning materials.' 
   }
 ];
 

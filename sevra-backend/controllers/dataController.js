@@ -1,4 +1,5 @@
 import Contact from '../models/contactModel.js';
+import Product from '../models/productModel.js';
 
 const getServices = (req, res) => {
   const services = [
@@ -11,16 +12,13 @@ const getServices = (req, res) => {
   res.json(services);
 };
 
-const getProducts = (req, res) => {
-  const products = [
-    { _id: '1', name: 'Rice (1kg)', price: 60, imageUrl: '/images/rice.jpg' },
-    { _id: '2', name: 'Milk (1L)', price: 55, imageUrl: '/images/milk.jpg' },
-    { _id: '3', name: 'Bread Loaf', price: 40, imageUrl: '/images/bread.jpg' },
-    { _id: '4', name: 'Eggs (Dozen)', price: 70, imageUrl: '/images/eggs.jpg' },
-    { _id: '5', name: 'Paracetamol', price: 25, imageUrl: '/images/paracetamol.jpg' },
-    { _id: '6', name: 'Cooking Oil (1L)', price: 150, imageUrl: '/images/oil.jpg' },
-  ];
-  res.json(products);
+const getPublicProducts = async (req, res) => {
+  try {
+    const products = await Product.find({});
+    res.json(products);
+  } catch (error) {
+    res.status(500).json({ message: 'Server Error' });
+  }
 };
 
 
@@ -46,4 +44,4 @@ const submitContactForm = async (req, res) => {
   res.status(201).json({ message: 'Message received. We will get back to you soon!' });
 };
 
-export { getServices, getProducts, getNews, submitContactForm };
+export { getServices, getPublicProducts, getNews, submitContactForm };

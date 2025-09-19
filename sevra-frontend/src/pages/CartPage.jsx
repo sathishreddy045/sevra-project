@@ -98,5 +98,4 @@ const CartPage = () => {
   );
 };
 
-// This is the line that was missing
 export default CartPage;

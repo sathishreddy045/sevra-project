@@ -1,11 +1,14 @@
-import React, { createContext, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { createContext, useState, useEffect, useContext } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import CartContext from './CartContext';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const { clearCart } = useContext(CartContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const storedUser = localStorage.getItem('sevraUser');
@@ -15,14 +18,18 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (userData) => {
+    clearCart();
     localStorage.setItem('sevraUser', JSON.stringify(userData));
     setUser(userData);
-    navigate('/dashboard');
+
+    const from = location.search.split('=')[1] || (userData.isAdmin ? '/admin/dashboard' : '/');
+    navigate(from);
   };
 
   const logout = () => {
     localStorage.removeItem('sevraUser');
     setUser(null);
+    clearCart();
     navigate('/login');
   };
 
