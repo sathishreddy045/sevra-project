@@ -2,29 +2,29 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
-import './App.css';
+import './styles/App.css';
 
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Navbar from './components/common/Navbar/Navbar';
+import Footer from './components/common/Footer/Footer';
 import AdminLayout from './components/admin/AdminLayout';
 
-import PrivateRoute from './utils/PrivateRoute';
-import AdminRoute from './utils/AdminRoute';
+import PrivateRoute from './hooks/PrivateRoute';
+import AdminRoute from './hooks/AdminRoute';
 
-import HomePage from './pages/HomePage';
-import ServicesPage from './pages/ServicesPage';
-import ProductsPage from './pages/ProductsPage';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
-import CartPage from './pages/CartPage';
-import DashboardPage from './pages/DashboardPage';
-import EditProfilePage from './pages/EditProfilePage';
-import AdminLoginPage from './pages/AdminLoginPage';
-import AdminDashboardPage from './pages/AdminDashboardPage';
-import AdminProductsPage from './pages/AdminProductsPage';
-import AdminOrdersPage from './pages/AdminOrdersPage';
-import AdminUsersPage from './pages/AdminUsersPage';
-import ContactPage from './pages/ContactPage';
+import HomePage from './pages/public/HomePage';
+import ServicesPage from './pages/public/ServicesPage';
+import ProductsPage from './pages/public/ProductsPage';
+import LoginPage from './pages/auth/LoginPage';
+import SignupPage from './pages/auth/SignupPage';
+import CartPage from './pages/user/CartPage';
+import DashboardPage from './pages/user/DashboardPage';
+import EditProfilePage from './pages/auth/EditProfilePage';
+import AdminLoginPage from './pages/admin/AdminLoginPage';
+import AdminDashboardPage from './pages/admin/AdminDashboardPage';
+import AdminProductsPage from './pages/admin/AdminProductsPage';
+import AdminOrdersPage from './pages/admin/AdminOrdersPage';
+import AdminUsersPage from './pages/admin/AdminUsersPage';
+import ContactPage from './pages/user/ContactPage';
 
 const UserLayout = () => {
   return (

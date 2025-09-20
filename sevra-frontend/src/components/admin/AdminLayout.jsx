@@ -8,7 +8,7 @@ export const AdminLayout = () => {
     <div className="admin-layout">
       <AdminSidebar />
       <main className="admin-content">
-        <Outlet /> {/* Child routes will be rendered here */}
+        <Outlet />
       </main>
     </div>
   );
